@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EditEmergencyController">
+   <children>
+      <ImageView fitHeight="616.0" fitWidth="684.0" layoutX="541.0" layoutY="-193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/edit.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txt_title" layoutX="540.0" layoutY="243.0" prefHeight="26.0" prefWidth="611.0" promptText="Title" />
+      <TextField fx:id="txt_description" layoutX="540.0" layoutY="288.0" prefHeight="26.0" prefWidth="618.0" promptText="Description" />
+      <TextField fx:id="txt_location" layoutX="540.0" layoutY="367.0" prefHeight="26.0" prefWidth="618.0" promptText="Location" />
+      <TextField fx:id="txt_status" layoutX="540.0" layoutY="410.0" prefHeight="26.0" prefWidth="618.0" promptText="Status" />
+      <DatePicker fx:id="txt_deadline" layoutX="540.0" layoutY="465.0" prefHeight="26.0" prefWidth="618.0" promptText="Deadline" />
+      <Button fx:id="btn_edit" layoutX="586.0" layoutY="529.0" mnemonicParsing="false" onAction="#editEmergency" prefHeight="32.0" prefWidth="219.0" style="-fx-background-color: green;" text="Update Emergency" textAlignment="CENTER" textFill="WHITE" />
+      <AnchorPane prefHeight="762.0" prefWidth="350.0" style="-fx-background-color: BLACK;" />
+      <TextField fx:id="txt_id" layoutX="540.0" layoutY="142.0" visible="false" />
+      <Button fx:id="btn_delete1" layoutX="884.0" layoutY="529.0" mnemonicParsing="false" onAction="#delete" prefHeight="32.0" prefWidth="219.0" style="-fx-background-color: red;" text="Delete" textAlignment="CENTER" textFill="WHITE" />
+      <ComboBox fx:id="txt_bloodtype" layoutX="540.0" layoutY="326.0" prefHeight="26.0" prefWidth="618.0" promptText="Choose Your BloodType" />
+   </children>
+</AnchorPane>

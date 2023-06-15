@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="890.0" prefWidth="1300.0" style="-fx-background-color: FFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AddEmergencyController">
+    <children>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: FFF;">
+         <children>
+            <BorderPane layoutX="10.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1300.0" style="-fx-background-color: fff;">
+               <top>
+                  <HBox prefHeight="70.0" prefWidth="200.0" spacing="220.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="55.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="55.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/BBLogo.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox prefHeight="70.0" prefWidth="511.0" spacing="50.0">
+                           <children>
+                              <Label text="Home" textFill="#3f3f3f">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Emergencies" textFill="#7e2323">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Products">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Events" textFill="#3f3f3f">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Articles" textFill="#3f3f3f">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </HBox>
+                        <HBox prefHeight="27.0" prefWidth="81.0" spacing="8.0">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/userS.png" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="21.0" prefWidth="103.0" text="Login" textFill="#a40e1c">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets top="20.0" />
+                           </HBox.margin>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </top>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" styleClass="white-background" stylesheets="@../css/Product.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="156.0" prefWidth="599.0" spacing="200.0" style="-fx-border-radius: 500; -fx-background-color: a40e1c;">
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="220.0" prefWidth="588.0">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="28.0" prefWidth="628.0" text="Emergencies don't wait, so let's not hesitate to Donate" textFill="WHITE">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="40.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Pane prefHeight="45.0" prefWidth="507.0" />
+                                    <Label text="BloodBound is Your Best Choice" textFill="WHITE">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="40.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Pane prefHeight="46.0" prefWidth="507.0" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="250.0" fitWidth="413.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../images/donation.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets left="100.0" right="40.0" />
+                           </padding>
+                        </HBox>
+                        <VBox prefHeight="72.0" prefWidth="1300.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" styleClass="white-background" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Pane prefHeight="487.0" prefWidth="326.0" />
+                              <ImageView fitHeight="357.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/amb.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="616.0" fitWidth="684.0" layoutX="640.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/emer.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txt_title" layoutX="751.0" layoutY="519.0" prefHeight="26.0" prefWidth="501.0" promptText="Title" />
+      <TextField fx:id="txt_description" layoutX="750.0" layoutY="562.0" prefHeight="26.0" prefWidth="502.0" promptText="Description" />
+      <TextField fx:id="txt_location" layoutX="748.0" layoutY="645.0" prefHeight="26.0" prefWidth="502.0" promptText="Location" />
+      <DatePicker fx:id="txt_deadline" layoutX="747.0" layoutY="686.0" prefHeight="26.0" prefWidth="502.0" promptText="Deadline" />
+      <Button fx:id="btn_add" layoutX="892.0" layoutY="751.0" mnemonicParsing="false" onAction="#addEmergency" prefHeight="32.0" prefWidth="219.0" style="-fx-background-color: green;" text="ADD Emergency" textAlignment="CENTER" textFill="WHITE" />
+      <TextField fx:id="txt_id" layoutX="540.0" layoutY="142.0" visible="false" />
+      <ComboBox fx:id="txt_bloodtype" layoutX="749.0" layoutY="605.0" prefHeight="26.0" prefWidth="502.0" promptText="Choose Your BloodType" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 avr. 2023, 22:08:34
+    Author     : hp
+*/
+
+.white-background {
+    -fx-background-color: #fff;
+}
+
+.transparent {
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.round-layout{
+    -fx-border-radius: 50;
+    -fx-border-color: rgba(164, 14, 28, 0.1);
+}
+
+.styless{
+    -fx-border-radius: 50;
+    -fx-background-color: rgba(164, 14, 28, 0.1);
+}
+
+.button{
+    -fx-background-color:#a40e1c;
+    -fx-background-radius:100;
+}
+
+.light-red-background {
+    -fx-background-color: rgba(164, 14, 28, 0.08);
+}

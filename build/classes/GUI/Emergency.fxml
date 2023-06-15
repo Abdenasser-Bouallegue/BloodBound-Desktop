@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EmergencyController">
+   <children>
+      <ImageView fitHeight="762.0" fitWidth="833.0" layoutX="309.0" layoutY="65.0" opacity="0.28" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Emergency.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="374.0" fitWidth="434.0" layoutX="847.0" layoutY="-77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/emergencyLogo-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txt_title" layoutX="540.0" layoutY="187.0" prefHeight="26.0" prefWidth="253.0" />
+      <TextField fx:id="txt_description" layoutX="540.0" layoutY="232.0" prefHeight="26.0" prefWidth="254.0" />
+      <TextField fx:id="txt_location" layoutX="540.0" layoutY="311.0" prefHeight="26.0" prefWidth="254.0" />
+      <Text layoutX="398.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Title" wrappingWidth="57.69010353088379" />
+      <Text layoutX="398.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Description" wrappingWidth="139.6901035308838" />
+      <PieChart fx:id="emergencyStatusPieChart" layoutX="443.0" layoutY="482.0" prefHeight="295.0" prefWidth="295.0" />
+      <TextField fx:id="txt_status" layoutX="540.0" layoutY="354.0" prefHeight="26.0" prefWidth="254.0" />
+      <Text layoutX="398.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Blood Type" wrappingWidth="139.6900987625122" />
+      <Text layoutX="398.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Location" wrappingWidth="139.69009637832642" />
+      <Text layoutX="398.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Status" wrappingWidth="160.6901035308838" />
+      <Text fill="#8d1212" layoutX="401.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" text="Deadline" wrappingWidth="132.6901035308838" />
+      <DatePicker fx:id="txt_deadline" layoutX="540.0" layoutY="409.0" prefHeight="26.0" prefWidth="254.0" />
+      <Button fx:id="btn_edit" layoutX="542.0" layoutY="450.0" mnemonicParsing="false" onAction="#edit" prefHeight="32.0" prefWidth="112.0" style="-fx-background-color: green;" text="EDIT" textAlignment="CENTER" textFill="WHITE" />
+      <Button fx:id="btn_delete" layoutX="683.0" layoutY="450.0" mnemonicParsing="false" onAction="#delete" prefHeight="32.0" prefWidth="112.0" style="-fx-background-color: red;" text="DELETE" textAlignment="CENTER" textFill="WHITE" />
+      <TableView fx:id="table" layoutX="821.0" layoutY="182.0" onMouseClicked="#getSelected" opacity="0.74" prefHeight="528.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="cl_title" prefWidth="75.0" text="Title" />
+          <TableColumn fx:id="cl_description" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="cl_bloodtype" prefWidth="53.5999755859375" text="BloodType" />
+            <TableColumn fx:id="cl_location" prefWidth="73.5999755859375" text="Location" />
+            <TableColumn fx:id="cl_status" prefWidth="75.9998779296875" text="Status" />
+            <TableColumn fx:id="cl_deadline" prefWidth="98.4000244140625" text="Deadline" />
+            <TableColumn fx:id="col_d" prefWidth="75.0" text="Column X" visible="false" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txt_id" layoutX="540.0" layoutY="142.0" visible="false" />
+      <Button layoutX="900.0" layoutY="721.0" mnemonicParsing="false" onAction="#onChooseFileButtonClicked" prefHeight="26.0" prefWidth="133.0" style="-fx-border-color: darkgreen;" text="To EXCEL" />
+      <Button layoutX="1061.0" layoutY="721.0" mnemonicParsing="false" onAction="#filechosserpdf" prefHeight="26.0" prefWidth="134.0" style="-fx-border-color: red;" text="Convert To PDF" />
+      <ComboBox fx:id="txt_bloodtype" layoutX="542.0" layoutY="272.0" prefHeight="26.0" prefWidth="254.0" />
+      <VBox layoutY="1.0" prefHeight="890.0" prefWidth="320.0" styleClass="styless" stylesheets="@../css/Product.css">
+         <children>
+            <ImageView fitHeight="64.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logobb.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="25.0" top="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/dashboard-interface.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Dashboard">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/group.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Users">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/product.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="productPage" onMouseClicked="#ProductPage" text="Products">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/appointment-book.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Appointments">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/ambulance.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Emergencies" textFill="#b10909">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/event.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Events">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                     <children>
+                        <ImageView fitHeight="35.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/newspaper.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Articles">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="40.0" top="60.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox prefHeight="39.0" prefWidth="289.0" spacing="15.0" stylesheets="@../css/Product.css">
+               <children>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Icons/log-out%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Logout" textFill="#3f3f3f">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" top="270.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
